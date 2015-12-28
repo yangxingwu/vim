@@ -1,0 +1,1 @@
+### This is a backup vimrc for myself, please feel free to try it.
