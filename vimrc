@@ -57,3 +57,7 @@ let Tlist_Sort_Type="name"
 " let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 " let g:ycm_confirm_extra_conf=0
 " let g:loaded_youcompleteme=1 " Disable YouCompleteMe
+
+" line length 80
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
