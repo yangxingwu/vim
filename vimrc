@@ -1,9 +1,9 @@
 set nu
-set ts=8
-set sw=8
+set ts=4
+set sw=4
 set t_Co=256
 set hlsearch
-set noexpandtab
+set expandtab
 set autoindent
 set smartindent
 set laststatus=2
@@ -25,20 +25,25 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Plugin 'mark'
 Plugin 'a.vim'
 Plugin 'taglist.vim'
 Plugin 'rking/ag.vim'
+Plugin 'fatih/vim-go'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-utils/vim-man'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" Solarized color scheme
+" Color schemes:
+" solarized, molokai, Tomorrow, Tomorrow-Night, Tomorrow-Night-Eighties
 syntax enable
-" set background=dark
-" colorscheme solarized
+set background=dark
+colorscheme solarized
 
 " Airline
 let g:airline#extensions#tabline#enabled=1
@@ -54,8 +59,9 @@ let Tlist_Sort_Type="name"
 " map <silent> <F7> :TlistToggle<cr>
 
 " YouCompleteMe
-" let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
-" let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
+let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf=0
 " let g:loaded_youcompleteme=1 " Disable YouCompleteMe
 
 " line length 80
