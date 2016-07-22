@@ -8,6 +8,9 @@ set autoindent
 set smartindent
 set laststatus=2
 
+" make backspace work like most other apps
+set backspace=2
+
 " Jump to the last cursor position
 au BufReadPost *
     \ if line("'\"") > 0 |
