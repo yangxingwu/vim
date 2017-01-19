@@ -35,6 +35,8 @@ Plugin 'a.vim'
 Plugin 'taglist.vim'
 Plugin 'rking/ag.vim'
 Plugin 'fatih/vim-go'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-utils/vim-man'
@@ -67,6 +69,15 @@ let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 " let g:loaded_youcompleteme=1 " Disable YouCompleteMe
 
+" ctrlp-funky
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+let g:ctrlp_extensions = ['funky']
+
 " line length 80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+ca Ag Ag!
+ca AgBuffer AgBuffer!
