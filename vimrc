@@ -41,6 +41,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-utils/vim-man'
 Plugin 'bling/vim-airline'
+Plugin 'majutsushi/tagbar'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -48,7 +49,7 @@ filetype plugin indent on    " required
 " solarized, molokai, Tomorrow, Tomorrow-Night, Tomorrow-Night-Eighties
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 " Airline
 let g:airline#extensions#tabline#enabled=1
@@ -63,6 +64,10 @@ let Tlist_Use_Right_Window=1
 let Tlist_Sort_Type="name"
 " map <silent> <F7> :TlistToggle<cr>
 
+" Tagbar
+let g:tagbar_left=1
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
 " YouCompleteMe
 set completeopt-=preview
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
@@ -76,8 +81,8 @@ nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 let g:ctrlp_extensions = ['funky']
 
 " line length 80
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
 ca Ag Ag!
 ca AgBuffer AgBuffer!
