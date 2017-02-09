@@ -42,6 +42,7 @@ Plugin 'rdnetto/YCM-Generator'
 Plugin 'vim-utils/vim-man'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
+Plugin 'elzr/vim-json'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
