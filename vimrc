@@ -50,7 +50,7 @@ filetype plugin indent on    " required
 " solarized, molokai, Tomorrow, Tomorrow-Night, Tomorrow-Night-Eighties
 syntax enable
 set background=dark
-colorscheme Tomorrow-Night
+colorscheme solarized
 
 " Airline
 let g:airline#extensions#tabline#enabled=1
@@ -87,3 +87,8 @@ let g:ctrlp_extensions = ['funky']
 
 ca Ag Ag!
 ca AgBuffer AgBuffer!
+
+" for macvim
+if has("gui_macvim")
+    set gfn=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
+endif
