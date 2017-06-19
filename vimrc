@@ -43,6 +43,8 @@ Plugin 'vim-utils/vim-man'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'elzr/vim-json'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -50,7 +52,7 @@ filetype plugin indent on    " required
 " solarized, molokai, Tomorrow, Tomorrow-Night, Tomorrow-Night-Eighties
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 " Airline
 let g:airline#extensions#tabline#enabled=1
@@ -92,3 +94,6 @@ ca AgBuffer AgBuffer!
 if has("gui_macvim")
     set gfn=Meslo\ LG\ M\ DZ\ Regular\ for\ Powerline:h14
 endif
+
+" markdown
+let g:vim_markdown_folding_disabled = 1
