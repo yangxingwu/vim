@@ -60,7 +60,6 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
 
-
 " Taglist
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
@@ -101,3 +100,6 @@ endif
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
+
+" nginx.conf
+au BufRead,BufNewFile ~/repos/nginx_lb_conf/* if &ft == '' | setfiletype nginx | endif
