@@ -76,7 +76,7 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 set completeopt-=preview
 let g:ycm_global_ycm_extra_conf='~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
-" let g:loaded_youcompleteme=1 " Disable YouCompleteMe
+let g:loaded_youcompleteme=1 " Disable YouCompleteMe
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
