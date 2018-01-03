@@ -1,5 +1,11 @@
 # vimrc backup
 
+## setup Vundle
+
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
 ## Go
 
 ### show tags for Go
