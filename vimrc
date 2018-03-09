@@ -46,6 +46,7 @@ Plugin 'elzr/vim-json'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Shirk/vim-gas'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
