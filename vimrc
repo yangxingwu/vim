@@ -7,6 +7,7 @@ set expandtab
 set autoindent
 set smartindent
 set laststatus=2
+set encoding=utf-8
 
 " make backspace work like most other apps
 set backspace=2
