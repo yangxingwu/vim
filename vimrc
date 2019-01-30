@@ -104,3 +104,6 @@ let g:vim_markdown_folding_disabled = 1
 
 " nginx.conf
 au BufRead,BufNewFile ~/repos/nginx_lb_conf/* if &ft == '' | setfiletype nginx | endif
+
+au bufnewfile *.sh 0r ~/.vim/template/sh.txt
+au bufnewfile *.py 0r ~/.vim/template/python.txt
