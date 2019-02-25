@@ -21,3 +21,10 @@ install `gotags` and other packages; and you can install `tagbar` from [majutsus
 From [nginx](https://github.com/nginx/nginx/blob/release-1.11.10/contrib/README#L17):
 
 > cp -R contrib/vim ~/.vim/
+
+## Rust
+
+To add rust support of YouCompleteMe:  
+
+1. install rust source code `rustup component add rust-src`
+2. build YouCompleteMe with `--rust-completer` flag
