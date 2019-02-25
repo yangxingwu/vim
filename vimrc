@@ -47,6 +47,7 @@ Plugin 'elzr/vim-json'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Shirk/vim-gas'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -107,3 +108,5 @@ au BufRead,BufNewFile ~/repos/nginx_lb_conf/* if &ft == '' | setfiletype nginx |
 
 au bufnewfile *.sh 0r ~/.vim/template/sh.txt
 au bufnewfile *.py 0r ~/.vim/template/python.txt
+
+let g:rustfmt_autosave = 1
