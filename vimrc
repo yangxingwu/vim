@@ -55,7 +55,9 @@ filetype plugin indent on    " required
 " solarized, molokai, Tomorrow, Tomorrow-Night, Tomorrow-Night-Eighties
 syntax enable
 set background=dark
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Airline
 let g:airline#extensions#tabline#enabled=1
