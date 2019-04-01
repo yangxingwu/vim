@@ -28,3 +28,11 @@ To add rust support of YouCompleteMe:
 
 1. install rust source code `rustup component add rust-src`
 2. build YouCompleteMe with `--rust-completer` flag
+
+## [iterm2-solarized.md](https://gist.github.com/kevin-smets/8568070)
+
+## restoring iTerm2 to default values
+
+```bash
+~$ defaults delete com.googlecode.iterm2
+```
