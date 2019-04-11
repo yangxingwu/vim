@@ -49,6 +49,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Shirk/vim-gas'
 Plugin 'rust-lang/rust.vim'
+Plugin 'morhetz/gruvbox'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -56,9 +57,7 @@ filetype plugin indent on    " required
 " solarized, molokai, Tomorrow, Tomorrow-Night, Tomorrow-Night-Eighties
 syntax enable
 set background=dark
-" colorscheme Tomorrow-Night
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme gruvbox
 
 " Airline
 let g:airline_powerline_fonts=1
