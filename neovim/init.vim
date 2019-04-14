@@ -32,6 +32,10 @@ Plug 'tbastos/vim-lua'
 " toml support
 Plug 'cespare/vim-toml'
 
+" rust support
+" install rust source code with 'rustup component add rust-src'
+Plug 'rust-lang/rust.vim'
+
 " nginx.conf support
 Plug 'othree/nginx-contrib-vim'
 
@@ -45,6 +49,10 @@ Plug 'morhetz/gruvbox'
 " highlight several words simultaneously
 Plug 'vim-scripts/mark'
 
+" install.py --clang-completer --go-completer --rust-completer
+Plug 'Valloric/YouCompleteMe'
+Plug 'rdnetto/YCM-Generator'
+
 " initialize plugin system
 call plug#end()
 
@@ -56,3 +64,11 @@ set background=dark
 " airline
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
+
+" rust auto format
+let g:rustfmt_autosave = 1
+
+" YouCompleteMe
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
