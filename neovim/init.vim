@@ -53,8 +53,14 @@ Plug 'vim-scripts/mark'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator'
 
+" tagbar
+Plug 'majutsushi/tagbar'
+
 " initialize plugin system
 call plug#end()
+
+" filetype
+filetype plugin indent on
 
 " colorscheme
 syntax enable
@@ -72,3 +78,9 @@ let g:rustfmt_autosave = 1
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" tagbar
+nnoremap <silent> <F9> :TagbarToggle<CR>
+autocmd VimEnter * nested :call tagbar#autoopen(1)
+autocmd FileType * nested :call tagbar#autoopen(0)
+autocmd BufEnter * nested :call tagbar#autoopen(0)
