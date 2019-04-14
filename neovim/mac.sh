@@ -19,3 +19,9 @@ brew install neovim
 # install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# YouCompleteMe unavailable: unable to load Python
+python -m pip install setuptools
+python -m pip install --upgrade pynvim
+python2 -m pip install --upgrade pynvim
+python3 -m pip install --upgrade pynvim
