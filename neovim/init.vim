@@ -72,9 +72,10 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 
 " rust auto format
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave=1
 
 " YouCompleteMe
+let g:ycm_confirm_extra_conf=0
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
