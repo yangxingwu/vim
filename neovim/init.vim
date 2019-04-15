@@ -13,6 +13,16 @@ set encoding=utf-8
 set cursorline
 set cursorcolumn
 
+" save last cursor position
+au BufReadPost *
+    \ if line("'\"") > 0 |
+    \    if line("'\"") <= line("$") |
+    \        exe "norm '\"" |
+    \    else |
+    \        exe "norm $" |
+    \    endif |
+    \ endif
+
 " specify a directory for plugins
 " - for neovim: ~/.local/share/nvim/plugged
 " - avoid using standard Vim directory names like 'plugin'
