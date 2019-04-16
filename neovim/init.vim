@@ -70,6 +70,9 @@ Plug 'rdnetto/YCM-Generator'
 " tagbar
 Plug 'majutsushi/tagbar'
 
+" show git diff
+Plug 'mhinz/vim-signify'
+
 " initialize plugin system
 call plug#end()
 
@@ -100,3 +103,6 @@ let g:tagbar_foldlevel=1
 let g:tagbar_iconchars=['+', '-']
 nnoremap <silent> <F9> :TagbarToggle<CR>
 autocmd VimEnter * nested :call tagbar#autoopen(1)
+
+" vim-signify
+let g:signify_vcs_list = [ 'git', 'svn' ]
