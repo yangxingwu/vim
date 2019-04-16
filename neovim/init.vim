@@ -100,5 +100,3 @@ let g:tagbar_foldlevel=1
 let g:tagbar_iconchars=['+', '-']
 nnoremap <silent> <F9> :TagbarToggle<CR>
 autocmd VimEnter * nested :call tagbar#autoopen(1)
-autocmd FileType * nested :call tagbar#autoopen(0)
-autocmd BufEnter * nested :call tagbar#autoopen(0)
