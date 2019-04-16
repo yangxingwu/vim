@@ -13,6 +13,10 @@ set encoding=utf-8
 set cursorline
 set cursorcolumn
 
+" syntax highlighting
+syntax on
+syntax enable
+
 " save last cursor position
 au BufReadPost *
     \ if line("'\"") > 0 |
@@ -73,7 +77,6 @@ call plug#end()
 filetype plugin indent on
 
 " colorscheme
-syntax enable
 colorscheme gruvbox
 set background=dark
 
