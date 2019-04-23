@@ -78,6 +78,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " function navigator for ctrlp.vim
 Plug 'tacahiroy/ctrlp-funky'
 
+" manage tag files
+Plug 'ludovicchabant/vim-gutentags'
+
 " initialize plugin system
 call plug#end()
 
@@ -105,14 +108,25 @@ nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:tagbar_sort=0
 let g:tagbar_compact=1
 let g:tagbar_foldlevel=1
-let g:tagbar_iconchars=['+', '-']
+let g:tagbar_iconchars=[ '+', '-' ]
 nnoremap <silent> <F9> :TagbarToggle<CR>
 autocmd VimEnter * nested :call tagbar#autoopen(1)
 
 " vim-signify
-let g:signify_vcs_list = [ 'git', 'svn' ]
+let g:signify_vcs_list=[ 'git', 'svn' ]
 
 " ctrlp-funky
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
+" vim-gutentags
+set tags=./.tags;,.tags
+" set root directory
+let g:gutentags_project_root=[ '.git', '.svn', '.root' ]
+" move tag file to '~/.cache/tags'
+let g:gutentags_ctags_tagfile='.tags'
+let g:gutentags_cache_dir=expand('~/.cache/tags')
+if !isdirectory('~/.cache/tags')
+    silent! call mkdir('~/.cache/tags', 'p')
+endif
