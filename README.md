@@ -36,3 +36,8 @@ To add rust support of YouCompleteMe:
 ```bash
 ~$ defaults delete com.googlecode.iterm2
 ```
+
+## neovim
+
+- default config path: `~/.config/nvim/init.vim`
+- default plugin path: `~/.local/share/nvim/plugged`
