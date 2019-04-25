@@ -70,11 +70,6 @@ Plug 'rdnetto/YCM-Generator'
 " show git diff
 Plug 'mhinz/vim-signify'
 
-" fuzzy file, buffer, mru, tag, etc finder
-Plug 'ctrlpvim/ctrlp.vim'
-" function navigator for ctrlp.vim
-Plug 'tacahiroy/ctrlp-funky'
-
 " manage tag files
 Plug 'ludovicchabant/vim-gutentags'
 
@@ -103,11 +98,6 @@ nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " vim-signify
 let g:signify_vcs_list=[ 'git', 'svn' ]
-
-" ctrlp-funky
-nnoremap <Leader>fu :CtrlPFunky<Cr>
-" narrow the list down with a word under cursor
-nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 " vim-gutentags
 set tags=./.tags;,.tags
