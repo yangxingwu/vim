@@ -73,6 +73,9 @@ Plug 'mhinz/vim-signify'
 " manage tag files
 Plug 'ludovicchabant/vim-gutentags'
 
+" asynchronous fuzzy finder
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
 " initialize plugin system
 call plug#end()
 
@@ -109,3 +112,8 @@ let g:gutentags_cache_dir=expand('~/.cache/tags')
 if !isdirectory('~/.cache/tags')
     silent! call mkdir('~/.cache/tags', 'p')
 endif
+
+" LeaderF
+let g:Lf_ShortcutF='<c-p>'
+nnoremap <leader>fu :LeaderfFunction<CR>
+let g:Lf_CommandMap={'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
