@@ -67,9 +67,6 @@ Plug 'vim-scripts/mark'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator'
 
-" tagbar
-Plug 'majutsushi/tagbar'
-
 " show git diff
 Plug 'mhinz/vim-signify'
 
@@ -103,14 +100,6 @@ let g:ycm_confirm_extra_conf=0
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
-" tagbar
-let g:tagbar_sort=0
-let g:tagbar_compact=1
-let g:tagbar_foldlevel=1
-let g:tagbar_iconchars=[ '+', '-' ]
-nnoremap <silent> <F9> :TagbarToggle<CR>
-autocmd VimEnter * nested :call tagbar#autoopen(1)
 
 " vim-signify
 let g:signify_vcs_list=[ 'git', 'svn' ]
