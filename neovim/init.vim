@@ -95,6 +95,7 @@ let g:rustfmt_autosave=1
 
 " YouCompleteMe
 let g:ycm_confirm_extra_conf=0
+let g:ycm_collect_identifiers_from_tags_files=1
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -104,6 +105,7 @@ let g:signify_vcs_list=[ 'git', 'svn' ]
 
 " vim-gutentags
 set tags=./.tags;,.tags
+let g:gutentags_ctags_extra_args=['--fields=+l']
 " set root directory
 let g:gutentags_project_root=[ '.git', '.svn', '.root' ]
 " move tag file to '~/.cache/tags'
