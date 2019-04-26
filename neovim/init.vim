@@ -119,3 +119,6 @@ endif
 let g:Lf_ShortcutF='<c-p>'
 nnoremap <leader>fu :LeaderfFunction<CR>
 let g:Lf_CommandMap={'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+
+" vim-go
+let g:go_version_warning=0
