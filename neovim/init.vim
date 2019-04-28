@@ -110,9 +110,9 @@ let g:gutentags_ctags_extra_args=['--fields=+l']
 let g:gutentags_project_root=[ '.git', '.svn', '.root' ]
 " move tag file to '~/.cache/tags'
 let g:gutentags_ctags_tagfile='.tags'
-let g:gutentags_cache_dir=expand('~/.cache/tags')
-if !isdirectory('~/.cache/tags')
-    silent! call mkdir('~/.cache/tags', 'p')
+let g:gutentags_cache_dir=expand('$HOME/.cache/tags')
+if !isdirectory('$HOME/.cache/tags')
+    silent! call mkdir('$HOME/.cache/tags', 'p')
 endif
 
 " LeaderF
