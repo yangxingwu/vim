@@ -76,6 +76,9 @@ Plug 'ludovicchabant/vim-gutentags'
 " asynchronous fuzzy finder
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
+" auto-completion for quotes, parens, brackets, etc
+Plug 'Raimondi/delimitMate'
+
 " initialize plugin system
 call plug#end()
 
