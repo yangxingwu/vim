@@ -125,3 +125,51 @@ let g:Lf_CommandMap={'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
 
 " vim-go
 let g:go_version_warning=0
+
+" linux kernel coding style
+"
+" this code is meant to help you respecting the Linux kernel coding style,
+" described at: http://www.kernel.org/doc/Documentation/CodingStyle
+"
+" pls see https://github.com/vivien/vim-linux-coding-style for more details
+"
+" enable the coding style on demand with cmd ': LinuxCodingStyle'
+
+command! LinuxCodingStyle call s:LinuxCodingStyle()
+
+function! s:LinuxCodingStyle()
+    call s:LinuxFormatting()
+    call s:LinuxKeywords()
+    call s:LinuxHighlighting()
+endfunction
+
+function s:LinuxFormatting()
+    setlocal tabstop=8
+    setlocal shiftwidth=8
+    setlocal softtabstop=8
+    setlocal textwidth=80
+    setlocal noexpandtab
+
+    setlocal cindent
+    setlocal cinoptions=:0,l1,t0,g0,(0
+endfunction
+
+function s:LinuxKeywords()
+    syn keyword cOperator likely unlikely
+    syn keyword cType u8 u16 u32 u64 s8 s16 s32 s64
+    syn keyword cType __u8 __u16 __u32 __u64 __s8 __s16 __s32 __s64
+endfunction
+
+function s:LinuxHighlighting()
+    highlight default link LinuxError ErrorMsg
+
+    syn match LinuxError / \+\ze\t/     " spaces before tab
+    syn match LinuxError /\%>80v[^()\{\}\[\]<>]\+/ " virtual column 81 and more
+
+    " Highlight trailing whitespace, unless we're in insert mode and the
+    " cursor's placed right after the whitespace. This prevents us from having
+    " to put up with whitespace being highlighted in the middle of typing
+    " something
+    autocmd InsertEnter * match LinuxError /\s\+\%#\@<!$/
+    autocmd InsertLeave * match LinuxError /\s\+$/
+endfunction
