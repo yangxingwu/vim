@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# create a soft link for init.vim
+ln -s ~/Development-Environment/neovim/init.vim ~/.config/nvim/init.vim
+
 # on-my-zsh
 sudo yum install zsh
 sudo chsh $USER --shell /bin/zsh
