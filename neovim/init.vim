@@ -69,7 +69,7 @@ Plug 'vim-scripts/mark'
 
 " install.py --clang-completer --go-completer --rust-completer
 Plug 'Valloric/YouCompleteMe'
-Plug 'rdnetto/YCM-Generator'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 " show git diff
 Plug 'mhinz/vim-signify'
