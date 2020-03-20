@@ -41,3 +41,14 @@ To add rust support of YouCompleteMe:
 
 - default config path: `~/.config/nvim/init.vim`
 - default plugin path: `~/.local/share/nvim/plugged`
+
+## https://github.com/universal-ctags/ctags
+
+```bash
+$ git clone git@github.com:universal-ctags/ctags.git
+$ cd ctags
+$ ./autogen.sh
+$ ./configure --prefix=/where/you/want # defaults to /usr/local
+$ make
+$ make install # may require extra privileges depending on where to install
+```

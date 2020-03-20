@@ -126,6 +126,7 @@ endif
 let g:Lf_ShortcutF='<c-p>'
 nnoremap <leader>fu :LeaderfFunction<CR>
 let g:Lf_CommandMap={'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+let g:Lf_Ctags='/usr/local/bin/ctags'
 
 " vim-go
 let g:go_version_warning=0
