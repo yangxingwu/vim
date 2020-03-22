@@ -131,6 +131,8 @@ let g:Lf_Ctags='/usr/local/bin/ctags'
 " vim-go
 let g:go_version_warning=0
 
+set maxmempattern=5000
+
 " linux kernel coding style
 "
 " this code is meant to help you respecting the Linux kernel coding style,
