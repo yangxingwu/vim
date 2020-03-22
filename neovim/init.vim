@@ -106,6 +106,7 @@ let g:ycm_collect_identifiers_from_tags_files=1
 nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_autoclose_preview_window_after_completion=1
 
 " vim-signify
 let g:signify_vcs_list=[ 'git', 'svn' ]
