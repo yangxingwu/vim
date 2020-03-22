@@ -42,7 +42,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'elzr/vim-json'
 
 " go support
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " lua support
 Plug 'tbastos/vim-lua'
