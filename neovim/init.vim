@@ -67,7 +67,7 @@ Plug 'morhetz/gruvbox'
 " highlight several words simultaneously
 Plug 'vim-scripts/mark'
 
-" install.py --clang-completer --go-completer --rust-completer
+" python3 ./install.py --clangd-completer --go-completer
 Plug 'ycm-core/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
