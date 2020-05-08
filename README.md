@@ -52,3 +52,21 @@ $ ./configure --prefix=/where/you/want # defaults to /usr/local
 $ make
 $ make install # may require extra privileges depending on where to install
 ```
+
+## YouCompleteMe with bear
+
+### install bear
+
+```bash
+$ git@github.com:rizsotto/Bear.git
+$ cd Bear
+$ cmake .
+$ make all
+$ sudo make install
+```
+
+### generate JSON compilation database
+
+```bash
+$ bear <your-build-command>
+```
