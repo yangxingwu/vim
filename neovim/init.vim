@@ -63,6 +63,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 " colorscheme gruvbox
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " highlight several words simultaneously
 Plug 'vim-scripts/mark'
@@ -89,7 +90,7 @@ call plug#end()
 filetype plugin indent on
 
 " colorscheme
-colorscheme gruvbox
+colorscheme dracula
 set background=dark
 
 " airline
