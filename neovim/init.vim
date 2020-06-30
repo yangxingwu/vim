@@ -83,6 +83,11 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 " auto-completion for quotes, parens, brackets, etc
 Plug 'Raimondi/delimitMate'
 
+" ALE (Asynchronous Lint Engine) is a plugin providing linting (syntax
+" checking and semantic errors) in NeoVim 0.2.0+ and Vim 8 while you
+" edit your text files, and acts as a Vim Language Server Protocol client
+Plug 'dense-analysis/ale'
+
 " initialize plugin system
 call plug#end()
 
@@ -133,6 +138,14 @@ let g:Lf_Ctags='/usr/local/bin/ctags'
 let g:go_version_warning=0
 
 set maxmempattern=5000
+
+" ale
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit=1
+" Enable Lint only for bash.
+let g:ale_linters={
+\   'sh': ['shellcheck'],
+\}
 
 " linux kernel coding style
 "

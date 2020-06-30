@@ -25,3 +25,6 @@ python -m pip install setuptools
 python -m pip install --upgrade pynvim
 python2 -m pip install --upgrade pynvim
 python3 -m pip install --upgrade pynvim
+
+# install shellcheck
+brew install shellcheck

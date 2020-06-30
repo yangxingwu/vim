@@ -18,3 +18,17 @@ sudo yum install -y neovim # python{2,34}-neovim
 # neovim configuration
 mkdir -p ~/.config/nvim/
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# install shellcheck
+sudo yum install ShellCheck
+
+# the pkg in centos7 repository is too old (0.3.8)
+
+# 1.compile shellcheck from source
+
+sudo yum install cabal-install
+cd shellcheck
+cabal install
+export PATH="$HOME/.cabal/bin:$PATH"
+
+# 2.download binary from github
