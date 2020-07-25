@@ -53,6 +53,12 @@ $ make
 $ make install # may require extra privileges depending on where to install
 ```
 
+## python linter
+
+```bash
+$ pip install pylint
+```
+
 ## YouCompleteMe with bear
 
 ### install bear

@@ -145,6 +145,7 @@ let g:ale_linters_explicit=1
 " Enable Lint only for bash.
 let g:ale_linters={
 \   'sh': ['shellcheck'],
+\   'python': ['pylint'],
 \}
 
 " linux kernel coding style
