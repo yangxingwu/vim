@@ -147,6 +147,10 @@ let g:ale_linters={
 \   'sh': ['shellcheck'],
 \   'python': ['pylint'],
 \}
+" Enbale fixers for python
+let g:ale_fixers={
+\   'python': ['black', 'isort']
+\}
 
 " linux kernel coding style
 "
