@@ -152,6 +152,9 @@ let g:ale_fixers={
 \   'python': ['black', 'isort']
 \}
 
+" ALWAYS use the clipboard for ALL operations
+set clipboard+=unnamedplus
+
 " linux kernel coding style
 "
 " this code is meant to help you respecting the Linux kernel coding style,
