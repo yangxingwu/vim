@@ -173,14 +173,14 @@ function! s:LinuxCodingStyle()
 endfunction
 
 function s:LinuxFormatting()
-    setlocal tabstop=8
-    setlocal shiftwidth=8
-    setlocal softtabstop=8
-    setlocal textwidth=80
-    setlocal noexpandtab
+    set tabstop=8
+    set shiftwidth=8
+    set softtabstop=8
+    set textwidth=80
+    set noexpandtab
 
-    setlocal cindent
-    setlocal cinoptions=:0,l1,t0,g0,(0
+    set cindent
+    set cinoptions=:0,l1,t0,g0,(0
 endfunction
 
 function s:LinuxKeywords()
